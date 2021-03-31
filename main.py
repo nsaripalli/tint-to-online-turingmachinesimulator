@@ -1,4 +1,3 @@
-# /usr/bin/python
 import yaml
 
 
@@ -11,7 +10,7 @@ def translate_tint_to_the_online_tm_format(name):
             machine = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
             print(exc)
-    direction_translations = {'L': '>', 'R': '<', 'S': '-'}
+    direction_translations = {'L': '<', 'R': '>', 'S': '-'}
 
     start = machine.get('start')
     accept = machine.get('accept')
@@ -31,4 +30,4 @@ def translate_tint_to_the_online_tm_format(name):
 
 
 if __name__ == '__main__':
-    translate_tint_to_the_online_tm_format('q6.yaml')
+    translate_tint_to_the_online_tm_format("q6.yaml")
